@@ -184,16 +184,18 @@
         >
       </div>
       <script>
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then(() => console.log("✅ SW Registered"))
-            .catch((err) => console.log("❌ SW Error", err));
-        }
-      </script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/RegisterRISSchool/sw.js')
+      .then(() => console.log('✅ SW Registered'))
+      .catch(err => console.log('❌ SW Error', err));
+  }
+</script>
+
+    
 
       <div class="credit">Created by Srean Phirom</div>
     </div>
   </body>
 </html>
+
 
