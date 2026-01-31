@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Riverland International School</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#004e92" />
+    <link rel="apple-touch-icon" href="icon-ris-192.png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&family=Moul&family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- SweetAlert2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans Khmer", sans-serif;
+        background: linear-gradient(to bottom right, #0f2027, #71c7e4, #2c5364);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: #ffffff;
+        color: #142286;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        padding: 30px 20px;
+        margin: 10px;
+      }
+
+      img {
+        width: 120px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-family: "Moul", serif;
+        color: #0d3896;
+        margin: 0;
+      }
+
+      p {
+        font-size: 24px;
+        color: #ff4d4d;
+        font-family: "Times New Roman", Times, serif;
+        margin: 0 0 18px 0;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 8px;
+      }
+
+      .digital-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: linear-gradient(145deg, #004e92, #0a92d1);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        width: 140px;
+        height: 140px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
+      }
+
+      .digital-button.disabled {
+        pointer-events: none;
+        opacity: 0.8;
+      }
+
+      .digital-button.red-danger {
+        background: linear-gradient(145deg, #d40000, #ff4d4d);
+        box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
+      }
+
+      .digital-button:hover {
+        transform: translateY(-6px);
+        background: linear-gradient(145deg, #66e0f0, #04c0a1);
+        box-shadow: 0 12px 24px rgba(255, 75, 43, 0.5);
+      }
+
+      .icon {
+        font-size: 40px;
+      }
+
+      #status {
+        margin-top: 14px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .credit {
+        margin-top: 18px;
+        font-size: 13px;
+        font-family: "Rowdies", sans-serif;
+        font-weight: 700;
+        background: linear-gradient(
+          90deg,
+          rgb(255, 77, 77),
+          rgb(77, 121, 255),
+          rgb(77, 255, 136)
+        );
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientAnim 4.5s ease infinite;
+      }
+
+      @keyframes gradientAnim {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="Logo1.PNG" alt="Logo សាលា" />
+      <h1>សាលាអន្តរជាតិ​ រីវើឡែនឌ៏</h1>
+      <p>Riverland International School</p>
+
+      <div class="button-container">
+        <a href="https://forms.gle/fUQ4baF9E4KCrDJn9" class="digital-button">
+          <i class="fas fa-user-check icon"></i>
+          <span id="btnText">ចុះឈ្មោះសិស្ស</span>
+        </a>
+
+        <a href="" class="digital-button">
+          <i class="fas fa-file-signature icon"></i>
+          ពិនិត្យមើលអ្នកបង់លុយ
+        </a>
+      </div>
+      <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(() => console.log("✅ SW Registered"))
+            .catch((err) => console.log("❌ SW Error", err));
+        }
+      </script>
+
+      <div class="credit">Created by Srean Phirom</div>
+    </div>
+  </body>
+</html>
