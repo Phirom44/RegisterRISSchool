@@ -1,19 +1,19 @@
 {
   "name": "ចុះឈ្មោះសិស្ស",
   "short_name": "Riverland",
-  "start_url": "/index.html",
-  "scope": "/",
+  "start_url": "/RegisterRISSchool/index.html",
+  "scope": "/RegisterRISSchool/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#004e92",
   "icons": [
     {
-      "src": "icon-ris-192.png",
+      "src": "/RegisterRISSchool/icon-ris-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-ris-512.png",
+      "src": "/RegisterRISSchool/icon-ris-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
